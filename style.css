@@ -1,8 +1,8 @@
 /* Pure CSS Gradient Background Animation from Codepen user Manuel Pinto */
 body {
-	background: linear-gradient(-45deg, rgba(12,55,201,.5), rgba(0,0,0,0));
+	background: linear-gradient(0deg, rgba(12,55,201,.5), rgba(1,56,49,.75), rgba(1,5,40,.75), rgba(0,36,52,.75), rgba(10,31,21,.75), rgba(40,29,1,.75), rgba(50,0,11,.75), rgba(0,0,0,.75));
 	background-size: 5000% 5000%;
-	animation: gradient 30s ease infinite;
+	animation: gradient 15s ease infinite;
 	height: 100vh;
 }
 
