@@ -1,0 +1,80 @@
+/* Pure CSS Gradient Background Animation from Codepen user Manuel Pinto */
+body {
+	background: linear-gradient(-45deg, rgba(12,55,201,.5), rgba(0,0,0,0));
+	background-size: 5000% 5000%;
+	animation: gradient 30s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {background-position: 0% 0%;}
+	50% {background-position: 100% 100%;}
+	100% {background-position: 0% 0%;}
+}
+/**/
+
+.hero {
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+
+.hero-foot {
+	background-color: rgba(0,0,0,.75) !important; 
+	padding-top: 1em !important;
+}
+
+.hero-foot>.container>.columns {
+	margin-bottom: 0em !important;
+}
+
+.foot-icon {
+	color: rgba(255,255,255,.5) !important; 
+	transition: color .5s !important;
+}
+
+.foot-icon:hover {
+	color: rgba(255,255,255,1) !important;
+}
+
+.title {
+	font-family: 'Noto Sans' !important; 
+	color: rgba(255,255,255,1) !important;
+}
+
+.subtitle {
+	font-family: 'Noto Sans' !important; 
+	color:rgba(255,255,255,.75) !important;
+	margin-bottom: .75em !important;
+}
+
+.button-style {
+	color: white !important;
+	border-width: 0 !important;
+	background-color: rgba(12,55,201,.75) !important;
+	transition: background-color .5s !important;
+}
+
+.button-style:hover {
+	background-color: rgba(12,55,201,1) !important;
+}
+
+.link {
+	color: orange !important;
+	transition: color .5s !important;
+}
+
+.link:hover {
+	color: white !important;
+}
+
+.press {
+	opacity: 70% !important;
+	transition: opacity .5s !important;
+}
+
+.press:hover {
+	opacity: 100% !important;
+}
+
+hr {height: .01em !important; background-color: rgba(255,255,255,.75) !important;}
