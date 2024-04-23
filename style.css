@@ -1,3 +1,8 @@
+.modal-content {
+	padding-right: 1em !important;
+	padding-left: 1em !important;
+}
+
 /* Spinning navbar firewheel*/
 #navlogo {
 	animation: navlogospin 5s linear infinite;

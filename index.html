@@ -19,7 +19,7 @@
 	<meta property="og:image:secure_url" content="https://firewheelsupportservices.com/logo.png" />
 	<meta property="og:title" content="Firewheel | Procurement strategy & technology advisory for SAP Fieldglass customers" />
 	<meta property="og:url" content="https://firewheelsupportservices.com" />
-	<meta property="og:description" content="" />
+	<meta property="og:description" content="Contingent worker, external workforce & services procurement, vendor management system implementation." />
 	
 	<title>Firewheel | Procurement strategy & technology advisory for SAP Fieldglass customers</title>
 	<link rel="icon" type="image/x-icon" href="logo.svg">
@@ -63,13 +63,12 @@
 				</h2>
 				
 				<div class="buttons">
-					<a class="button button-style is-rounded is-large" id="ctaButton">
+					<a class="button button-style is-rounded js-modal-trigger" id="cta" data-target="contactForm">
 						<i class="fa-solid fa-envelopes-bulk"></i>
 						&nbsp;
 						<p id="ctaText">Get started</p>
 					</a>
-				</div>
-								
+				</div>								
 			</div>
 		</div>
 		
@@ -103,6 +102,35 @@
 		</div>
 	</section>
 	
+	<div class="modal" id="contactForm">
+		<div class="modal-background"></div>
+		<div class="modal-content">
+			<h2 class="subtitle">
+				Contact
+			</h2>
+			<form action="https://formsubmit.co/abhi@firewheelsupportservices.com" method="POST">
+				<div class="field">
+					<label class="label"></label>
+					<div class="control has-icons-left">
+						<textarea class="textarea" type="text" name="message" placeholder="🖊 My message..." required></textarea>
+					</div>
+				</div>
+				<div class="field">
+					<label class="label"></label>
+					<div class="control">
+						<input class="input" type="email" name="email" placeholder="✉️ My email..." required>
+					</div>
+				</div>
+				<div class="buttons">
+					<button class="button button-style is-rounded" type="submit">
+						<i class="fa-solid fa-envelopes-bulk"></i>&nbsp;Send my message
+					</button>
+				</div>
+			</form>
+		</div>
+	
+	</div>
+	
 	<script>
 		// smooth scrolling javascript for non-Safari browsers
 		$(document).ready(function(){
@@ -135,24 +163,60 @@
 	
 		});
 		</script>
-		
-	<script>
-		document.getElementById("x").addEventListener("click", myFunction);
-		
-		function myFunction() {
-			document.getElementById("message").remove();
-		}
-		</script>
 	
 	<script>
-		document.getElementById("ctaButton").addEventListener("click", myFunction);
+		document.getElementById("cta").addEventListener("click", myFunction);
 		
 		function myFunction() {
 			document.getElementById("ctaText").innerHTML = "abhi@firewheelsupportservices.com";
 		}
 		</script>
+	
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			// Functions to open and close a modal
+			function openModal($el) {
+				$el.classList.add('is-active');
+			}
+			
+			function closeModal($el) {
+				$el.classList.remove('is-active');
+			}
+			
+			function closeAllModals() {
+				(document.querySelectorAll('.modal') || []).forEach(($modal) => {
+					closeModal($modal);
+				});
+			}
+			
+			// Add a click event on buttons to open a specific modal
+			(document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+				const modal = $trigger.dataset.target;
+				const $target = document.getElementById(modal);
+				
+				$trigger.addEventListener('click', () => {
+					openModal($target);
+				});
+			});
 
-		
+			// Add a click event on various child elements to close the parent modal
+			(document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+				const $target = $close.closest('.modal');
+				
+				$close.addEventListener('click', () => {
+					closeModal($target);
+				});
+			});
+			
+			// Add a keyboard event to close all modals
+			document.addEventListener('keydown', (event) => {
+				if(event.key === "Escape") {
+					closeAllModals();
+				}
+			});
+		});
+		</script>
+
 </body>
 
 </html>
