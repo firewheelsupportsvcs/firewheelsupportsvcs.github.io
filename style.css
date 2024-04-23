@@ -1,3 +1,4 @@
+/* Spinning navbar firewheel*/
 #navlogo {
 	animation: navlogospin 5s linear infinite;
 }
@@ -6,12 +7,13 @@
     0% {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
 }
+/**/
 
 /* Pure CSS Gradient Background Animation from Codepen user Manuel Pinto */
 body {
-	background: linear-gradient(0deg, rgba(12,55,201,.5), rgba(1,56,49,.75), rgba(1,5,40,.75), rgba(0,36,52,.75), rgba(10,31,21,.75), rgba(40,29,1,.75), rgba(50,0,11,.75), rgba(0,0,0,.75));
+	background: linear-gradient(-45deg, rgba(0,0,0,1), rgba(50,0,11,1), rgba(40,29,1,1), rgba(10,31,21,1), rgba(0,36,52,1), rgba(1,5,40,1), rgba(1,56,49,1), rgba(12,55,201,1));
 	background-size: 5000% 5000%;
-	animation: gradient 15s linear infinite;
+	animation: gradient 50s linear infinite;
 	height: 100vh;
 }
 
@@ -77,13 +79,13 @@ body {
 	color: white !important;
 }
 
-.press {
+/*.press {
 	opacity: 70% !important;
 	transition: opacity .5s !important;
 }
 
 .press:hover {
 	opacity: 100% !important;
-}
+}*/
 
 hr {height: .01em !important; background-color: rgba(255,255,255,.75) !important;}
